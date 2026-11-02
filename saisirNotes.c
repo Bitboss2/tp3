@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "exercice1.h"
 
 void saisirNotes(int tabeleves[100][100],int nbeleves){
     for(int i = 0; i<nbeleves; i++){

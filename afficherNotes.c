@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "exercice1.h"
 
 void afficherNotes(int tab[100][100]){
     printf("Tableau des notes \n");

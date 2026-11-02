@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "exercice1.h"
 
 float calculerMoyenneGenerale(int tab[100][100], int effectifclasse){
     float mgenerale = 0;

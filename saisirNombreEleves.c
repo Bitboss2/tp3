@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "exercice1.h"
 
 int saisirNombreEleves(void){
     int nbeleves = 0;

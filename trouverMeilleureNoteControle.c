@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "exercice1.h"
 
 int trouverMeilleureNoteControle(int tab[100][100], int numcontrole){
     int meilleure_note = 0;
