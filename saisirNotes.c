@@ -7,12 +7,12 @@ void saisirNotes(int tabeleves[100][100],int nbeleves){
         int note2 = 0;
         int note3 = 0;
         debut:
-        printf("entrez la note de l'eleve entre 0 et 20 %d", &i+1);
+        printf("entrez les note de l'eleve entre 0 et 20 %d", i+1);
         printf("note controle 1");
         scanf("%d", &note1);
-        if(0 <= note1 < 20)
+        if(note1 >= 0 && note1 <= 20)
         {
-            tabeleves[i+1][1] = note1;
+            tabeleves[i+1][0] = note1;
         }
         else{
             printf("note invalide car pas comprise entre 0 et 20");
@@ -22,7 +22,7 @@ void saisirNotes(int tabeleves[100][100],int nbeleves){
         
         printf("note controle 2");
         scanf("%d", &note2);
-        if(0 <= note2 < 20)
+        if(note1 >= 0 && note1 <= 20)
         {
             tabeleves[i+1][1] = note2;
         }
@@ -34,9 +34,9 @@ void saisirNotes(int tabeleves[100][100],int nbeleves){
         
         printf("note controle 3");
         scanf("%d", &note3);
-        if(0 <= note3 < 20)
+        if(note1 >= 0 && note1 <= 20)
         {
-            tabeleves[i+1][1] = note3;
+            tabeleves[i+1][2] = note3;
         }
         else{
             printf("note invalide car pas comprise entre 0 et 20");
