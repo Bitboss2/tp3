@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+void afficherMeilleuresNotes(int tab[100][100]){
+    int meilleure1 =  trouverMeilleureNoteControle(tab[100][100], 1);
+    printf("meilleure note au controle 1 : %d \n", meilleure1);
+    int meilleure2 = trouverMeilleureNoteControle(tab[100][100], 2);
+    printf("meilleure note au controle 2 : %d \n", meilleure2);
+    int meilleure3 = trouverMeilleureNoteControle(tab[100][100], 3);
+    printf("meilleure note au controle 3 : %d \n", meilleure3);
+}
