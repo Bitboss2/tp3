@@ -15,3 +15,13 @@ int saisir_montant(void){
 
     return montant;
 }
+
+int montant_valide(int montant){
+
+    if(montant > 0 && montant <= 1000){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
