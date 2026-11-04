@@ -18,7 +18,7 @@ int saisir_montant(void){
 
 int montant_valide(int montant){
 
-    if(montant > 0 && montant <= 1000){
+    if(montant > 0 && montant <= 1000 && montant % 5 == 0){
         return 1;
     }
     else{
