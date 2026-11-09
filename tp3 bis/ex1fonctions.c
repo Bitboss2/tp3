@@ -43,6 +43,26 @@ void corps_etoile(char tab[100][100], int taille, int largeur){
     }
 }
 
+void jambes_etoile(char tab[100][100], int taille, int largeur){
+    for(int i = 0; i < taille - 1; i++){
+        int ligne = 2 * taille + i;
+        int gauche = taille;
+        int droite = largeur - 1 - taille;
+        int interieur_gauche = 2 * taille - i;
+        int interieur_droite = largeur - 1 - 2 * taille + i;
+        tab[ligne][gauche] = '.';
+        tab[ligne][droite] = '.';
+        tab[ligne][interieur_gauche] = '"';
+        tab[ligne][interieur_droite] = '"';
+        for(int g = gauche + 1; g < interieur_gauche; g++){
+            tab[ligne][g] = 'S';
+        }
+        for(int g = interieur_droite + 1; g < droite; g++){
+            tab[ligne][g] = 'S';
+        }
+    }
+}
+
 
 int main(void){
     int taille = 0;
@@ -61,6 +81,7 @@ int main(void){
 
     pointe_etoile(img, indice_colonne_centrale, taille, largeur);
     corps_etoile(img, taille, largeur);
+    jambes_etoile(img, taille, largeur);
 
     for(int i = 0; i< hauteur_totale; i++){
         for(int g = 0; g<largeur; g++){
