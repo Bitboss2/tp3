@@ -30,6 +30,19 @@ void pointe_etoile(char tab[100][100], int centrale, int taille, int largeur){
 
 }
 
+void corps_etoile(char tab[100][100], int taille, int largeur){
+    for(int i = 0; i < taille; i++){
+        int ligne = taille + i;
+        int gauche = i;
+        int droite = largeur - 1 - i;
+        tab[ligne][gauche] = '.';
+        tab[ligne][droite] = '.';
+        for(int g = gauche + 1; g < droite; g++){
+            tab[ligne][g] = 'S';
+        }
+    }
+}
+
 
 int main(void){
     int taille = 0;
@@ -47,6 +60,7 @@ int main(void){
     int indice_colonne_centrale = largeur / 2;
 
     pointe_etoile(img, indice_colonne_centrale, taille, largeur);
+    corps_etoile(img, taille, largeur);
 
     for(int i = 0; i< hauteur_totale; i++){
         for(int g = 0; g<largeur; g++){
